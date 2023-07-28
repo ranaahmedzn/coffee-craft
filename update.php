@@ -40,12 +40,9 @@
 
         <div class="add-form">
           <div class="section-name">
-            <h4 class="sub-title">Add New Coffee</h4>
+            <h4 class="sub-title">Update Existing Coffee Details</h4>
             <p>
-              It is a long established fact that a reader will be distraceted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed to using Content here.
+                It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.
             </p>
           </div>
           <form class="form">
@@ -75,12 +72,12 @@
                 />
               </div>
               <div>
-                <label for="taste">Taste</label>
+                <label for="price">Price</label>
                 <input
-                  type="text"
-                  name="taste"
-                  id="taste"
-                  placeholder="Enter coffee taste"
+                  type="number"
+                  name="price"
+                  id="price"
+                  placeholder="Enter coffee price"
                 />
               </div>
             </div>
@@ -115,7 +112,7 @@
                 />
               </div>
             </div>
-            <button type="submit" class="add-btn2">Submit</button>
+            <button type="submit" class="add-btn2">Update Coffee Details</button>
           </form>
         </div>
       </section>

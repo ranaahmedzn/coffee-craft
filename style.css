@@ -88,6 +88,9 @@ header .banner button {
     font-family: 'Rancho', cursive;
     font-size: 18px;
 }
+header .banner button:hover{
+    cursor: pointer;
+}
 
 header .about-product {
     background: #ECEAE3;
@@ -141,6 +144,9 @@ header .about-product {
     margin: 20px auto;
     font-family: 'Rancho', cursive;
     font-size: 18px;
+}
+.add-btn:hover, .add-btn2:hover{
+    cursor: pointer;
 }
 
 .products {

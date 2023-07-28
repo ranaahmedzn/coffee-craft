@@ -74,95 +74,51 @@
         <div class="section-name">
           <p>--- Sip & Savor ---</p>
           <h3 class="section-title">Our Popular Products</h3>
-          <button class="add-btn">
-            Add Coffee
-            <i class="fa-solid fa-mug-hot"></i>
+          <a href="addCoffee.php">
+            <button class="add-btn">
+              Add Coffee
+              <i class="fa-solid fa-mug-hot"></i>
           </button>
+          </a>
         </div>
 
         <img class="cup-img" src="./images/more/4.png" alt="">
         <img class="shop-img" src="./images/more/5.png" alt="">
 
         <div class="products">
-          <div class="product">
-            <img src="./images/1.png" alt="">
-            <div class="product-info">
-              <p><span>Name: </span> Americano Coffee</p>
-              <p><span>Chef: </span> Mr. Matin Paul</p>
-              <p><span>Price: </span> 890 Taka</p>
-            </div>
-            <div class="actions">
-              <a href="" class="view-btn"><i class="fa-solid fa-eye"></i></a>
-              <a href="" class="update-btn"><i class="fa-regular fa-pen-to-square"></i></a>
-              <a href="" class="delete-btn"><i class="fa-solid fa-trash"></i></a>
-            </div>
-          </div>
+          <?php
+            include 'connect.php';
+            $sql = "SELECT * FROM `coffees`";
+            $result = mysqli_query($conn, $sql);
 
-          <div class="product">
-            <img src="./images/1.png" alt="">
-            <div class="product-info">
-              <p><span>Name: </span> Americano Coffee</p>
-              <p><span>Chef: </span> Mr. Matin Paul</p>
-              <p><span>Price: </span> 890 Taka</p>
-            </div>
-            <div class="actions">
-              <a href="" class="view-btn"><i class="fa-solid fa-eye"></i></a>
-              <a href="" class="update-btn"><i class="fa-regular fa-pen-to-square"></i></a>
-              <a href="" class="delete-btn"><i class="fa-solid fa-trash"></i></a>
-            </div>
-          </div>
-          <div class="product">
-            <img src="./images/1.png" alt="">
-            <div class="product-info">
-              <p><span>Name: </span> Americano Coffee</p>
-              <p><span>Chef: </span> Mr. Matin Paul</p>
-              <p><span>Price: </span> 890 Taka</p>
-            </div>
-            <div class="actions">
-              <a href="" class="view-btn"><i class="fa-solid fa-eye"></i></a>
-              <a href="" class="update-btn"><i class="fa-regular fa-pen-to-square"></i></a>
-              <a href="" class="delete-btn"><i class="fa-solid fa-trash"></i></a>
-            </div>
-          </div>
-          <div class="product">
-            <img src="./images/1.png" alt="">
-            <div class="product-info">
-              <p><span>Name: </span> Americano Coffee</p>
-              <p><span>Chef: </span> Mr. Matin Paul</p>
-              <p><span>Price: </span> 890 Taka</p>
-            </div>
-            <div class="actions">
-              <a href="" class="view-btn"><i class="fa-solid fa-eye"></i></a>
-              <a href="" class="update-btn"><i class="fa-regular fa-pen-to-square"></i></a>
-              <a href="" class="delete-btn"><i class="fa-solid fa-trash"></i></a>
-            </div>
-          </div>
-          <div class="product">
-            <img src="./images/1.png" alt="">
-            <div class="product-info">
-              <p><span>Name: </span> Americano Coffee</p>
-              <p><span>Chef: </span> Mr. Matin Paul</p>
-              <p><span>Price: </span> 890 Taka</p>
-            </div>
-            <div class="actions">
-              <a href="" class="view-btn"><i class="fa-solid fa-eye"></i></a>
-              <a href="" class="update-btn"><i class="fa-regular fa-pen-to-square"></i></a>
-              <a href="" class="delete-btn"><i class="fa-solid fa-trash"></i></a>
-            </div>
-          </div>
-          <div class="product">
-            <img src="./images/1.png" alt="">
-            <div class="product-info">
-              <p><span>Name: </span> Americano Coffee</p>
-              <p><span>Chef: </span> Mr. Matin Paul</p>
-              <p><span>Price: </span> 890 Taka</p>
-            </div>
-            <div class="actions">
-              <a href="" class="view-btn"><i class="fa-solid fa-eye"></i></a>
-              <a href="" class="update-btn"><i class="fa-regular fa-pen-to-square"></i></a>
-              <a href="" class="delete-btn"><i class="fa-solid fa-trash"></i></a>
-            </div>
-          </div>
+            if (mysqli_num_rows($result) > 0) {
+              while($row = mysqli_fetch_assoc($result)) {
+                $name = $row['name'];
+                $photo = $row['photo'];
+                $chef = $row['chef'];
+                $price = $row['price'];
+
+
+                echo '<div class="product">
+                <img src="'.$photo.'" alt="">
+                <div class="product-info">
+                  <p><span>Name: </span> '.$name.'</p>
+                  <p><span>Chef: </span> '.$chef.'</p>
+                  <p><span>Price: </span> '.$price.' Taka</p>
+                </div>
+                <div class="actions">
+                  <a href="" class="view-btn"><i class="fa-solid fa-eye"></i></a>
+                  <a href="" class="update-btn"><i class="fa-regular fa-pen-to-square"></i></a>
+                  <a href="" class="delete-btn"><i class="fa-solid fa-trash"></i></a>
+                </div>
+                </div>';
+              }
+            } else {
+              echo "0 results";
+            }
+            
+            mysqli_close($conn);
+          ?>
         </div>
       </section>
 
