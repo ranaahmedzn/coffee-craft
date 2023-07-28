@@ -8,7 +8,8 @@
 font-family: 'Rancho', cursive; */
 
 /*-----common styles------ */
-p, span{
+p,
+span {
     color: #1B1A1A;
     font-family: Raleway;
 }
@@ -110,6 +111,89 @@ header .about-product {
 
 
 /*-----main design start here------ */
+
+.products-section{
+    position: relative;
+    overflow: hidden;
+}
+.products-section .cup-img{
+    top: 60px;
+    left: -80px;
+    position: absolute;
+    z-index: -1;
+}
+.products-section .shop-img{
+    right: -80px;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.add-btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid #331A15;
+    background: #E3B577;
+    margin: 20px auto;
+}
+
+.products {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    z-index: 10;
+}
+
+.product {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background: #F5F4F1;
+    padding-right: 40px;
+}
+.product p{
+    margin-bottom: 12px;
+}
+.product p span{
+    font-weight: bold;
+}
+.actions {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    flex-grow: grow;
+    margin-left: auto;
+}
+
+.view-btn,
+.update-btn,
+.delete-btn {
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+
+.view-btn {
+    background: #D2B48C;
+}
+
+.update-btn {
+    background: #3C393B;
+}
+
+.delete-btn {
+    background: #EA4744;
+}
+
+
+/*-----follow section start here------ */
 .follow-section {
     width: 100%;
     max-width: 1200px;
@@ -140,7 +224,7 @@ header .about-product {
     justify-content: space-between;
 }
 
-.contact-info{
+.contact-info {
     width: 50%;
 }
 
@@ -174,18 +258,18 @@ header .about-product {
     margin-bottom: 20px;
 }
 
-.contact-form{
+.contact-form {
     width: 50%;
 }
 
-.contact-form .form{
+.contact-form .form {
     width: 100%;
     margin: 20px auto;
 }
 
 input,
 textarea {
-    border: 0;
+    border: 1px solid rgba(128, 128, 128, 0.350);
     outline: 0;
     padding: 1em;
     display: block;
@@ -209,6 +293,14 @@ textarea {
     cursor: pointer;
 }
 
+.phone,
+.email,
+.address {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
 /*-----footer start here------ */
 footer {
