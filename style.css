@@ -25,7 +25,7 @@ section {
 
 .section-title {
     color: #331A15;
-    font-family: Rancho;
+    font-family: 'Rancho', cursive;
     font-size: 40px;
 }
 
@@ -45,7 +45,7 @@ header .nav {
 
 header .nav .logo {
     color: #FFF;
-    font-family: Rancho;
+    font-family: 'Rancho', cursive;
     font-size: 50px;
     line-height: normal;
 }
@@ -68,7 +68,7 @@ header .banner div {
 
 header .banner h3 {
     color: #FFF;
-    font-family: Rancho;
+    font-family: 'Rancho', cursive;
     font-size: 48px;
 }
 
@@ -85,6 +85,8 @@ header .banner button {
     background-color: #E3B577;
     font-weight: 500;
     border: none;
+    font-family: 'Rancho', cursive;
+    font-size: 18px;
 }
 
 header .about-product {
@@ -104,7 +106,7 @@ header .about-product {
 
 .about-product div h4 {
     color: #331A15;
-    font-family: Rancho;
+    font-family: 'Rancho', cursive;
     font-size: 24px;
     margin: 12px 0px;
 }
@@ -137,6 +139,8 @@ header .about-product {
     border: 2px solid #331A15;
     background: #E3B577;
     margin: 20px auto;
+    font-family: 'Rancho', cursive;
+    font-size: 18px;
 }
 
 .products {
@@ -241,7 +245,7 @@ header .about-product {
 }
 
 .website-name .logo {
-    font-family: Rancho;
+    font-family: 'Rancho', cursive;
     font-size: 40px;
     line-height: normal;
 }
@@ -257,7 +261,7 @@ header .about-product {
 }
 
 .sub-title {
-    font-family: Rancho;
+    font-family: 'Rancho', cursive;
     font-size: 40px;
     line-height: normal;
     margin-bottom: 20px;
@@ -291,11 +295,13 @@ textarea {
 }
 
 #input-submit {
-    padding: 10px 15px;
+    padding: 10px 25px;
     border-radius: 30px;
     border: 2px solid #331A15;
     color: #331A15;
     cursor: pointer;
+    font-family: 'Rancho', cursive;
+    font-size: 18px;
 }
 
 .phone,
@@ -370,11 +376,13 @@ textarea {
 
 .add-btn2 {
     width: 100%;
-    padding: 1em;
+    padding: 12px 25px;
     border-radius: 5px;
     border: 2px solid #331A15;
     background: #E3B577;
     margin: 20px auto;
+    font-family: 'Rancho', cursive;
+    font-size: 18px;
 }
 
 
@@ -392,5 +400,5 @@ footer {
 
 footer p {
     color: white;
-    font-family: Rancho;
+    font-family: 'Rancho', cursive;
 }
