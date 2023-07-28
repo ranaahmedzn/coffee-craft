@@ -11,7 +11,7 @@ font-family: 'Rancho', cursive; */
 p,
 span {
     color: #1B1A1A;
-    font-family: Raleway;
+    font-family: 'Raleway', sans-serif;
 }
 
 section {
@@ -74,7 +74,7 @@ header .banner h3 {
 
 header .banner p {
     color: #FFF;
-    font-family: Raleway;
+    font-family: 'Raleway', sans-serif;
     line-height: 30px;
     margin: 16px 0px 32px 0px;
 }
@@ -112,17 +112,19 @@ header .about-product {
 
 /*-----main design start here------ */
 
-.products-section{
+.products-section {
     position: relative;
     overflow: hidden;
 }
-.products-section .cup-img{
+
+.products-section .cup-img {
     top: 60px;
     left: -80px;
     position: absolute;
     z-index: -1;
 }
-.products-section .shop-img{
+
+.products-section .shop-img {
     right: -80px;
     bottom: 0;
     position: absolute;
@@ -157,12 +159,15 @@ header .about-product {
     background: #F5F4F1;
     padding-right: 40px;
 }
-.product p{
+
+.product p {
     margin-bottom: 12px;
 }
-.product p span{
+
+.product p span {
     font-weight: bold;
 }
+
 .actions {
     display: flex;
     gap: 10px;
@@ -267,17 +272,17 @@ header .about-product {
     margin: 20px auto;
 }
 
-input,
-textarea {
+.contact-form .form input,
+.contact-form .form textarea {
     border: 1px solid rgba(128, 128, 128, 0.350);
     outline: 0;
     padding: 1em;
     display: block;
     width: 100%;
     margin-top: 1em;
-    font-family: 'Merriweather', sans-serif;
     box-shadow: (0 1px 1px rgba(black, 0.1));
     resize: none;
+    font-family: 'Raleway', sans-serif;
 }
 
 textarea {
@@ -301,6 +306,77 @@ textarea {
     align-items: center;
     margin-bottom: 10px;
 }
+
+/*-----add coffee section start here------ */
+.add-coffee-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.back-btn {
+    border: none;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.back-btn a {
+    text-decoration: none;
+    color: #374151;
+}
+
+.back-btn a span {
+    font-family: 'Rancho', cursive;
+}
+
+.add-form {
+    width: 100%;
+    border-radius: 5px;
+    background: #F4F3F0;
+    padding: 50px 100px;
+    margin-top: 25px;
+}
+
+.add-form .form input {
+    border: 1px solid rgba(128, 128, 128, 0.200);
+    border-radius: 5px;
+    outline: 0;
+    padding: 1em;
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    box-shadow: (0 1px 1px rgba(black, 0.1));
+    resize: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+.input-row {
+    display: flex;
+    gap: 20px;
+}
+
+.input-row div {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-row div label {
+    color: rgba(27, 26, 26, 0.80);
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.add-btn2 {
+    width: 100%;
+    padding: 1em;
+    border-radius: 5px;
+    border: 2px solid #331A15;
+    background: #E3B577;
+    margin: 20px auto;
+}
+
 
 /*-----footer start here------ */
 footer {
