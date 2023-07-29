@@ -11,12 +11,12 @@
     $details = $_POST['details'];
     $photoUrl = $_POST['photoUrl'];
 
-    $sql = "INSERT INTO `coffees`(`name`, `chef`, `supplier`, `price`, `category`, `details`, `photo`) VALUES ('$name','$chef','$supplier','$taste','$category','$details','$photoUrl')";
+    $sql = "INSERT INTO `coffees`(`name`, `chef`, `supplier`, `price`, `category`, `details`, `photo`) VALUES ('$name','$chef','$supplier','$price','$category','$details','$photoUrl')";
 
     if (mysqli_query($conn, $sql)) {
       // echo "New coffee inserted successfully!";
     } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      echo "Error adding product: " . $sql . "<br>" . mysqli_error($conn);
     }
     
     mysqli_close($conn);
@@ -50,7 +50,7 @@
     <header>
       <div class="nav">
         <img width="60" src="./images/more/logo1.png" alt="" />
-        <h2 class="logo">Coffee Craft</h2>
+        <a href="index.php"><h2 class="logo">Coffee Craft</h2></a>
       </div>
     </header>
 
@@ -209,3 +209,11 @@
     </footer>
   </body>
 </html>
+
+<!-- images link -->
+<!-- https://i.ibb.co/fq2CZhC/1.png
+https://i.ibb.co/YTfKbNt/2.png
+https://i.ibb.co/XXHS4YW/3.png
+https://i.ibb.co/cFHMtw8/4.png
+https://i.ibb.co/BssYcsF/5.png
+https://i.ibb.co/48nRfzv/6.png -->

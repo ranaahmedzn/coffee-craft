@@ -22,7 +22,7 @@
     <header>
       <div class="nav">
         <img width="60" src="./images/more/logo1.png" alt="" />
-        <h2 class="logo">Coffee Craft</h2>
+        <a href="index.php"><h2 class="logo">Coffee Craft</h2></a>
       </div>
 
       <div class="banner">
@@ -93,6 +93,7 @@
 
             if (mysqli_num_rows($result) > 0) {
               while($row = mysqli_fetch_assoc($result)) {
+                $id = $row['id'];
                 $name = $row['name'];
                 $photo = $row['photo'];
                 $chef = $row['chef'];
@@ -107,14 +108,14 @@
                   <p><span>Price: </span> '.$price.' Taka</p>
                 </div>
                 <div class="actions">
-                  <a href="" class="view-btn"><i class="fa-solid fa-eye"></i></a>
-                  <a href="" class="update-btn"><i class="fa-regular fa-pen-to-square"></i></a>
-                  <a href="" class="delete-btn"><i class="fa-solid fa-trash"></i></a>
+                  <a href="coffeeDetails.php?id='.$id.'" class="view-btn"><i class="fa-solid fa-eye"></i></a>
+                  <a href="update.php?id='.$id.'" class="update-btn"><i class="fa-regular fa-pen-to-square"></i></a>
+                  <a href="delete.php?id='.$id.'" class="delete-btn"><i class="fa-solid fa-trash"></i></a>
                 </div>
                 </div>';
               }
             } else {
-              echo "0 results";
+              echo '<h3>Available Product is: 0</h3>';
             }
             
             mysqli_close($conn);

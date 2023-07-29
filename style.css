@@ -4,14 +4,12 @@
     box-sizing: border-box;
 }
 
-/* font-family: 'Raleway', sans-serif;
-font-family: 'Rancho', cursive; */
-
 /*-----common styles------ */
 p,
 span {
     color: #1B1A1A;
     font-family: 'Raleway', sans-serif;
+    line-height: 25px;
 }
 
 section {
@@ -48,6 +46,9 @@ header .nav .logo {
     font-family: 'Rancho', cursive;
     font-size: 50px;
     line-height: normal;
+}
+header .nav a{
+    text-decoration: none;
 }
 
 header .banner {
@@ -144,9 +145,11 @@ header .about-product {
     margin: 20px auto;
     font-family: 'Rancho', cursive;
     font-size: 18px;
+    transition: all .5s;
 }
 .add-btn:hover, .add-btn2:hover{
     cursor: pointer;
+    background-color: transparent;
 }
 
 .products {
@@ -171,7 +174,7 @@ header .about-product {
 }
 
 .product p {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .product p span {
@@ -308,6 +311,11 @@ textarea {
     cursor: pointer;
     font-family: 'Rancho', cursive;
     font-size: 18px;
+    transition: all .5s;
+}
+
+#input-submit:hover{
+    background: #E3B577;
 }
 
 .phone,
@@ -388,7 +396,8 @@ textarea {
     background: #E3B577;
     margin: 20px auto;
     font-family: 'Rancho', cursive;
-    font-size: 18px;
+    font-size: 20px;
+    transition: all .5s;
 }
 
 

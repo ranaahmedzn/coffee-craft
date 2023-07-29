@@ -1,0 +1,24 @@
+.details-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-details {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #F4F3F0;
+    padding: 50px 100px;
+    margin-top: 25px;
+}
+
+.product-info p {
+    margin-bottom: 10px;
+}
+
+.product-info p span {
+    font-weight: bold;
+}

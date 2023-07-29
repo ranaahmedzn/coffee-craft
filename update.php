@@ -1,3 +1,48 @@
+<?php
+  include 'connect.php';
+
+  if(isset($_GET['id'])){
+    $id = $_GET['id'];
+
+    $sql = "SELECT * FROM `coffees` WHERE id=$id";
+    $result = mysqli_query($conn, $sql); 
+
+    if($result){
+        $row = mysqli_fetch_assoc($result);
+        $id = $row['id'];
+        $name = $row['name'];
+        $chef = $row['chef'];
+        $supplier = $row['supplier'];
+        $price = $row['price'];
+        $category = $row['category'];
+        $details = $row['details'];
+        $photoUrl = $row['photo'];
+
+        if(isset($_POST['updateCoffee'])){
+          $name = $_POST['name'];
+          $chef = $_POST['chef'];
+          $supplier = $_POST['supplier'];
+          $price = $_POST['price'];
+          $category = $_POST['category'];
+          $details = $_POST['details'];
+          $photoUrl = $_POST['photoUrl'];
+
+          $sql = "UPDATE `coffees` SET `name`='$name',`chef`='$chef',`supplier`='$supplier',`price`='$price',`category`='$category',`details`='$details',`photo`='$photoUrl' WHERE id=$id";
+
+          if(mysqli_query($conn, $sql)){
+            echo "Product successfully updated!";
+          }
+          else{
+            echo "Error updating record: " . mysqli_error($conn);
+          }
+        }
+    }
+
+    mysqli_close($conn);
+  }
+?>
+
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -24,7 +69,7 @@
     <header>
       <div class="nav">
         <img width="60" src="./images/more/logo1.png" alt="" />
-        <h2 class="logo">Coffee Craft</h2>
+        <a href="index.php"><h2 class="logo">Coffee Craft</h2></a>
       </div>
     </header>
 
@@ -32,7 +77,7 @@
       <!-- add coffee section -->
       <section class="add-coffee-section">
         <button class="back-btn">
-          <a href="index.html">
+          <a href="index.php">
             <i class="fa-solid fa-arrow-left"></i>
             <span>Back to Home</span>
           </a>
@@ -45,11 +90,11 @@
                 It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.
             </p>
           </div>
-          <form class="form">
+          <form method="post" class="form">
             <div class="input-row">
               <div>
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name" placeholder="Name" />
+                <input type="text" name="name" id="name" placeholder="Name" value="<?php echo $name;?>" />
               </div>
               <div>
                 <label for="chef">Chef</label>
@@ -58,6 +103,7 @@
                   name="chef"
                   id="chef"
                   placeholder="Enter coffee chef"
+                  value="<?php echo $chef;?>"
                 />
               </div>
             </div>
@@ -69,6 +115,7 @@
                   name="supplier"
                   id="supplier"
                   placeholder="Enter coffee content"
+                  value="<?php echo $supplier;?>"
                 />
               </div>
               <div>
@@ -78,6 +125,7 @@
                   name="price"
                   id="price"
                   placeholder="Enter coffee price"
+                  value="<?php echo $price;?>"
                 />
               </div>
             </div>
@@ -89,6 +137,7 @@
                   name="category"
                   id="category"
                   placeholder="Enter coffee category"
+                  value="<?php echo $category;?>"
                 />
               </div>
               <div>
@@ -98,6 +147,7 @@
                   name="details"
                   id="details"
                   placeholder="Enter coffee details"
+                  value="<?php echo $details;?>"
                 />
               </div>
             </div>
@@ -109,10 +159,11 @@
                   name="photoUrl"
                   id="photoUrl"
                   placeholder="Enter photo URL"
+                  value="<?php echo $photoUrl;?>"
                 />
               </div>
             </div>
-            <button type="submit" class="add-btn2">Update Coffee Details</button>
+            <button type="submit" name="updateCoffee" class="add-btn2">Update Coffee Details</button>
           </form>
         </div>
       </section>
