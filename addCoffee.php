@@ -1,5 +1,6 @@
 <?php
   include 'connect.php';
+  $inserted = false;
 
   if(isset($_POST['addCoffee'])){
     
@@ -15,6 +16,7 @@
 
     if (mysqli_query($conn, $sql)) {
       // echo "New coffee inserted successfully!";
+      $inserted = true;
     } else {
       echo "Error adding product: " . $sql . "<br>" . mysqli_error($conn);
     }
@@ -44,6 +46,13 @@
       src="https://kit.fontawesome.com/e713737a14.js"
       crossorigin="anonymous"
     ></script>
+    <!-- sweetalert link -->
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js
+    "></script>
+    <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.min.css
+    " rel="stylesheet">
   </head>
 
   <body>
@@ -207,13 +216,18 @@
     <footer>
       <p>&copy;Copyright Coffee Craft | All Rights Reserved</p>
     </footer>
+
+    <!-- js for open a sweetalert after adding a new product -->
+    <script src="jquery-3.7.0.min.js"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script>
+      if(<?php echo $inserted; ?>){
+        Swal.fire(
+            'Added!',
+            'Your new product has been added.',
+            'success'
+          )
+      }
+    </script>
   </body>
 </html>
-
-<!-- images link -->
-<!-- https://i.ibb.co/fq2CZhC/1.png
-https://i.ibb.co/YTfKbNt/2.png
-https://i.ibb.co/XXHS4YW/3.png
-https://i.ibb.co/cFHMtw8/4.png
-https://i.ibb.co/BssYcsF/5.png
-https://i.ibb.co/48nRfzv/6.png -->

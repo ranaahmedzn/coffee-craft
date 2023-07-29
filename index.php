@@ -16,6 +16,13 @@
       src="https://kit.fontawesome.com/e713737a14.js"
       crossorigin="anonymous"
     ></script>
+    <!-- sweetalert link -->
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js
+    "></script>
+    <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.min.css
+    " rel="stylesheet">
   </head>
 
   <body>
@@ -201,5 +208,30 @@
     <footer>
       <p>&copy;Copyright Coffee Craft | All Rights Reserved</p>
     </footer>
+
+    <!-- js for showing alert after click on the delete product button -->
+    <script src="jquery-3.7.0.min.js"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script>
+      $('.delete-btn').on('click', function (e) {
+        e.preventDefault();
+
+        const href = $(this).attr('href');
+
+        Swal.fire({
+          title: 'Are you sure?',
+          text: "You will not be able to revert this!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            document.location.href = href;
+          }
+        })
+      })
+    </script>
   </body>
 </html>

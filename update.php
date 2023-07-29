@@ -1,5 +1,6 @@
 <?php
   include 'connect.php';
+  $updated = false;
 
   if(isset($_GET['id'])){
     $id = $_GET['id'];
@@ -30,7 +31,8 @@
           $sql = "UPDATE `coffees` SET `name`='$name',`chef`='$chef',`supplier`='$supplier',`price`='$price',`category`='$category',`details`='$details',`photo`='$photoUrl' WHERE id=$id";
 
           if(mysqli_query($conn, $sql)){
-            echo "Product successfully updated!";
+            // echo "Product successfully updated!";
+            $updated = true;
           }
           else{
             echo "Error updating record: " . mysqli_error($conn);
@@ -56,13 +58,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway&family=Rancho&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
     <!-- font awesome -->
     <script
       src="https://kit.fontawesome.com/e713737a14.js"
       crossorigin="anonymous"
     ></script>
+     <!-- sweetalert link -->
+     <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js
+    "></script>
+    <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.min.css
+    " rel="stylesheet">
   </head>
 
   <body>
@@ -229,5 +237,18 @@
     <footer>
       <p>&copy;Copyright Coffee Craft | All Rights Reserved</p>
     </footer>
+
+    <!-- js for open a sweetalert after updating the product -->
+    <script src="jquery-3.7.0.min.js"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script>
+      if(<?php echo $updated; ?>){
+        Swal.fire(
+            'Updated!',
+            'Your product has been updated.',
+            'success'
+          )
+      }
+    </script>
   </body>
 </html>
