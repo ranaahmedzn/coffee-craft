@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee Craft</title>
-    <link rel="icon" href="./images/more/logo1.png" type="image/x-icon" />
+    <link rel="icon" href="https://i.ibb.co/hDjm9pW/logo1.png" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <link rel="stylesheet" type="text/css" href="./coffeeDetails.css" />
 
@@ -24,7 +24,7 @@
   <body>
     <header>
       <div class="nav">
-        <img width="60" src="./images/more/logo1.png" alt="" />
+        <img width="60" src="https://i.ibb.co/hDjm9pW/logo1.png" alt="" />
         <a href="index.php"><h2 class="logo">Coffee Craft</h2></a>
       </div>
     </header>
@@ -76,7 +76,7 @@
         <div class="parent-div">
           <div class="contact-info">
             <div class="website-name">
-              <img width="60" src="./images/more/logo1.png" alt="" />
+              <img width="60" src="https://i.ibb.co/hDjm9pW/logo1.png" alt="" />
               <h2 class="logo">Coffee Craft</h2>
             </div>
             <p>

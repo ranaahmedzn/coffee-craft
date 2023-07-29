@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee Craft</title>
-    <link rel="icon" href="./images/more/logo1.png" type="image/x-icon" />
+    <link rel="icon" href="https://i.ibb.co/hDjm9pW/logo1.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
 
     <!-- google fonts link -->
@@ -28,7 +28,7 @@
   <body>
     <header>
       <div class="nav">
-        <img width="60" src="./images/more/logo1.png" alt="" />
+        <img width="60" src="https://i.ibb.co/hDjm9pW/logo1.png" alt="" />
         <a href="index.php"><h2 class="logo">Coffee Craft</h2></a>
       </div>
 
@@ -47,26 +47,26 @@
       <div class="about-product">
         <div class="parent-div">
           <div>
-            <img src="./images/icons/1.png" alt="" />
+            <img src="https://i.ibb.co/3szfp0z/1.png" alt="" />
             <h4>Awesome Aroma</h4>
             <p>
               You will definitely be a fan of the design & aroma of your coffee
             </p>
           </div>
           <div>
-            <img src="./images/icons/2.png" alt="" />
+            <img src="https://i.ibb.co/rsKdBx3/2.png" alt="" />
             <h4>High Quality</h4>
             <p>We served the coffee to you maintaining the best quality</p>
           </div>
           <div>
-            <img src="./images/icons/3.png" alt="" />
+            <img src="https://i.ibb.co/52NNyLk/3.png" alt="" />
             <h4>Pure Grades</h4>
             <p>
               The coffee is made of the green coffee beans which you will love
             </p>
           </div>
           <div>
-            <img src="./images/icons/4.png" alt="" />
+            <img src="https://i.ibb.co/WyMbhCW/4.png" alt="" />
             <h4>Proper Roasting</h4>
             <p>
               Your coffee is brewed by first roasting the green coffee beans
@@ -89,8 +89,8 @@
           </a>
         </div>
 
-        <img class="cup-img" src="./images/more/4.png" alt="">
-        <img class="shop-img" src="./images/more/5.png" alt="">
+        <img class="cup-img" src="https://i.ibb.co/g3GQTXz/4.png" alt="">
+        <img class="shop-img" src="https://i.ibb.co/PhfcHcR/4a.png" alt="">
 
         <div class="products">
           <?php
@@ -108,7 +108,7 @@
 
 
                 echo '<div class="product">
-                <img src="'.$photo.'" alt="">
+                <img width="194" height="240" src="'.$photo.'" alt="">
                 <div class="product-info">
                   <p><span>Name: </span> '.$name.'</p>
                   <p><span>Chef: </span> '.$chef.'</p>
@@ -152,7 +152,7 @@
         <div class="parent-div">
           <div class="contact-info">
             <div class="website-name">
-              <img width="60" src="./images/more/logo1.png" alt="" />
+              <img width="60" src="https://i.ibb.co/hDjm9pW/logo1.png" alt="" />
               <h2 class="logo">Coffee Craft</h2>
             </div>
             <p>
